@@ -129,6 +129,12 @@
         .nav-link-effect:hover::after {
             transform: translateX(-50%) scaleX(1); /* Expand on hover */
         }
+        /* Mobile specific H1 size adjustment */
+        @media (max-width: 640px) {
+            .hero-h1 {
+                font-size: 2.5rem; /* Equivalent to text-4xl */
+            }
+        }
     </style>
 </head>
 <body class="min-h-screen">
@@ -157,8 +163,8 @@
                 <!-- Typing animation target. Starts empty. -->
                 <p class="text-md sm:text-lg text-emerald-500 mb-4 font-mono" id="typing-text"></p>
 
-                <h1 class="text-5xl sm:text-7xl md:text-8xl font-extrabold tracking-tight mb-4 leading-tight">
-                    <!-- Removed glitch-text class -->
+                <!-- Added custom class hero-h1 for responsive sizing -->
+                <h1 class="hero-h1 text-5xl sm:text-7xl md:text-8xl font-extrabold tracking-tight mb-4 leading-tight">
                     <span class="neon-title">CYBER-DEFENDER IN TRAINING</span>
                 </h1>
                 <!-- Short professional line added back here to replace the removed descriptive text, filling the spacing -->
@@ -196,8 +202,8 @@
                     </p>
                 </div>
                 <div class="md:col-span-1 flex justify-center">
-                    <!-- FIXED: Reverting to the local content ID for stability -->
-                    <img src="uploaded:image_43564b.jpg-ff981d59-a548-4bb1-b1e5-ca9581ee890f" onerror="this.onerror=null; this.src='https://placehold.co/200x200/10b981/0f172a?text=Sidhaant';" alt="Sidhaant Menon Professional Profile Photo" class="rounded-full border-4 border-emerald-500 shadow-2xl shadow-emerald-700/50 w-48 h-48 object-cover">
+                    <!-- FIXED: Reverting to the stable, smaller LinkedIn URL for better reliability and faster loading -->
+                    <img src="https://media.licdn.com/dms/image/v2/D4D03AQEH_Pmg_lZEug/profile-displayphoto-shrink_400_400/B4DZYg27RxG4Ak-/0/1744307992998?e=1762387200&v=beta&t=fQQZ4-p2n2jkzMd6dVoJBTj_vGkL-ic3yG6f5MYAGCI" alt="Sidhaant Menon Professional Profile Photo" class="rounded-full border-4 border-emerald-500 shadow-2xl shadow-emerald-700/50 w-48 h-48 object-cover">
                 </div>
             </div>
         </section>
