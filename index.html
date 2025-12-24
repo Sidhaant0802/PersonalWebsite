@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sidhaant's Secure Portfolio // CE, Cybersecurity</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Load Inter font from Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Inconsolata:wght@200..900&family=Orbitron:wght@400..900&family=JetBrains+Mono:wght@100..800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #00ff41; /* Cyber Green */
+            --bg-dark: #080c14; /* Deep Cyber Dark */
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: #e2e8f0;
+            overflow-x: hidden;
+            background-color: var(--bg-dark);
+        }
+
+        /* --- Subtle Grid Background --- */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0.1;
+            z-index: -1;
+            background-image: 
+                linear-gradient(to right, #00ff41 1px, transparent 1px),
+                linear-gradient(to bottom, #00ff41 1px, transparent 1px);
+            background-size: 30px 30px;
+        }
+        
+        .font-display { font-family: 'Orbitron', sans-serif; }
+        .font-mono { font-family: 'JetBrains Mono', monospace; }
+
+        /* --- DIGITAL FRONTIER Flicker Animation --- */
+        .neon-span {
+            color: var(--primary-color);
+            text-shadow: 0 0 15px rgba(0, 255, 65, 0.6);
+            animation: flicker 2s infinite ease-in-out;
+        }
+
+        @keyframes flicker {
+            0%, 100% { opacity: 1; text-shadow: 0 0 15px rgba(0, 255, 65, 0.6); }
+            50% { opacity: 0.8; text-shadow: 0 0 5px rgba(0, 255, 65, 0.3); }
+            52% { opacity: 1; }
+            54% { opacity: 0.9; }
+        }
+
+        .terminal-cursor::after {
+            content: '_';
+            animation: blink 1s step-end infinite;
+            color: var(--primary-color);
+        }
+
+        @keyframes blink { 50% { opacity: 0; } }
+
+        .data-stream-divider {
+            height: 2px;
+            background: linear-gradient(to right, transparent, var(--primary-color), transparent);
+            margin: 4rem auto;
+            width: 80%;
+            opacity: 0.3;
+        }
+
+        .project-card {
+            transition: all 0.3s ease;
+            border: 1px solid rgba(0, 255, 65, 0.1);
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 0 20px rgba(0, 255, 65, 0.2);
+            border-color: var(--primary-color);
+        }
+
+        /* Mobile Adjustments */
+        @media (max-width: 640px) {
+            .hero-h1 { font-size: 2.5rem; line-height: 1.1; }
+            section { padding-top: 3rem; padding-bottom: 3rem; }
+        }
+    </style>
+</head>
+<body class="min-h-screen">
+
+    <!-- Fixed Header -->
+    <header class="fixed top-0 left-0 right-0 bg-[#080c14]/90 backdrop-blur-md z-50 border-b border-[#00ff41]/20">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
+            <a href="#hero" class="text-lg font-bold font-display text-[#00ff41]">
+                // SIDHAANT
+            </a>
+            <div class="space-x-4 flex font-mono text-xs sm:text-sm">
+                <a href="#about" class="text-slate-400 hover:text-[#00ff41] transition tracking-tighter">About</a>
+                <a href="#skills" class="text-slate-400 hover:text-[#00ff41] transition tracking-tighter">Skills</a>
+                <a href="#projects" class="text-slate-400 hover:text-[#00ff41] transition tracking-tighter">Projects</a>
+                <a href="#contact" class="text-slate-400 hover:text-[#00ff41] transition tracking-tighter">Contact</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-24">
+
+        <!-- Hero Section -->
+        <section id="hero" class="min-h-[70vh] flex flex-col items-center justify-center text-center">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-[#00ff41]/30 bg-[#00ff41]/10 text-[#00ff41] font-mono text-[10px] mb-6">
+                <span class="w-2 h-2 rounded-full bg-[#00ff41] animate-pulse"></span>
+                SYSTEM STATUS: ONLINE
+            </div>
+            <h1 class="hero-h1 text-5xl sm:text-7xl md:text-8xl font-display font-bold leading-tight mb-4">
+                SECURING THE<br>
+                <span class="neon-span">DIGITAL FRONTIER</span>
+            </h1>
+            <p class="text-lg text-slate-400 max-w-2xl mb-8 font-sans">
+                Bridging Computer Engineering principles with advanced Cybersecurity practices at <b>Bennett University</b>.
+            </p>
+            <div id="typing-container" class="font-mono text-emerald-500 text-sm mb-8 terminal-cursor"></div>
+            <a href="#projects" class="px-8 py-3 bg-[#00ff41] text-black font-bold font-mono rounded hover:bg-[#00cc33] transition transform hover:scale-105">
+                VIEW DEPLOYED MODULES
+            </a>
+        </section>
+
+        <div class="data-stream-divider"></div>
+
+        <!-- About Section -->
+        <section id="about">
+            <div class="grid md:grid-cols-3 gap-12 items-center">
+                <div class="md:col-span-2">
+                    <h2 class="text-3xl font-display font-bold mb-6 text-[#00ff41] tracking-widest">// 01: PROFILE.INFO</h2>
+                    <div class="space-y-4 text-slate-300 leading-relaxed text-base">
+                        <p>I am currently pursuing a B.Tech in Computer Engineering with a specialization in Cybersecurity at <b>Bennett University</b>. Beyond academics, I’ve gained hands-on industry exposure through a 6-month cybersecurity internship, where I worked on real-world threat analysis.</p>
+                        <p>One of my proudest moments was being invited to deliver a <b>Cybersecurity Awareness Seminar</b> at the Indian Air Force Station in Thane, educating officers and cadets on digital hygiene.</p>
+                        <p>On campus, I serve as the <b>General Secretary</b> of Bennett University’s first and only Cybersecurity Club, where I lead workshops and mentor students passionate about ethical hacking.</p>
+                    </div>
+                </div>
+                <div class="md:col-span-1 flex justify-center">
+                    <img src="https://media.licdn.com/dms/image/v2/D4D03AQEH_Pmg_lZEug/profile-displayphoto-shrink_800_800/B4DZYg27RxG4Ag-/0/1744307992998?e=1766620800&v=beta&t=T2i3q6CSkr3TbEuUX2-F8u1-dvyhGFcL07C8my6UfMM" alt="Sidhaant Profile" class="rounded-full border-4 border-[#00ff41] shadow-2xl shadow-[#00ff41]/20 w-48 h-48 object-cover">
+                </div>
+            </div>
+        </section>
+
+        <div class="data-stream-divider"></div>
+
+        <!-- Skills Section -->
+        <section id="skills">
+            <h2 class="text-3xl font-display font-bold text-center mb-12 text-[#00ff41] tracking-widest">// 02: CORE.CAPABILITIES</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="bg-slate-900/50 p-6 rounded border-l-4 border-[#00ff41]">
+                    <h3 class="font-bold text-lg mb-3">Network Security</h3>
+                    <ul class="text-xs text-slate-400 font-mono space-y-2">
+                        <li>- Firewall Config</li>
+                        <li>- IDS/IPS Systems</li>
+                        <li>- OSI Analysis</li>
+                        <li>- Wireshark</li>
+                    </ul>
+                </div>
+                <div class="bg-slate-900/50 p-6 rounded border-l-4 border-[#00ff41]">
+                    <h3 class="font-bold text-lg mb-3">AppSec</h3>
+                    <ul class="text-xs text-slate-400 font-mono space-y-2">
+                        <li>- OWASP Top 10</li>
+                        <li>- Secure Code Review</li>
+                        <li>- SQLi/XSS Prevention</li>
+                        <li>- Burp Suite</li>
+                    </ul>
+                </div>
+                <div class="bg-slate-900/50 p-6 rounded border-l-4 border-[#00ff41]">
+                    <h3 class="font-bold text-lg mb-3">Operating Systems</h3>
+                    <ul class="text-xs text-slate-400 font-mono space-y-2">
+                        <li>- Linux Hardening</li>
+                        <li>- Bash Scripting</li>
+                        <li>- Virtualization</li>
+                        <li>- Shell Proficiency</li>
+                    </ul>
+                </div>
+                <div class="bg-slate-900/50 p-6 rounded border-l-4 border-[#00ff41]">
+                    <h3 class="font-bold text-lg mb-3">Dev & Tools</h3>
+                    <ul class="text-xs text-slate-400 font-mono space-y-2">
+                        <li>- Python / C++</li>
+                        <li>- Git / VC</li>
+                        <li>- Kali Linux</li>
+                        <li>- Metasploit</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <div class="data-stream-divider"></div>
+
+        <!-- Projects Section -->
+        <section id="projects">
+            <h2 class="text-3xl font-display font-bold text-center mb-10 text-[#00ff41] tracking-widest">// 03: PROJECT.LOGS</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="project-card bg-slate-900/50 p-6 rounded-lg">
+                    <h3 class="text-xl font-bold mb-2 text-[#00ff41]">Ciphers Club Interface</h3>
+                    <p class="text-sm text-slate-400 mb-4">Official web hub for Bennett University's Cybersecurity club. Responsive CTF event engine.</p>
+                    <div class="flex gap-2 flex-wrap font-mono text-[10px] text-[#00ff41]">
+                        <span class="bg-emerald-900/30 px-2 py-1">HTML5</span>
+                        <span class="bg-emerald-900/30 px-2 py-1">UI/UX</span>
+                    </div>
+                </div>
+                <div class="project-card bg-slate-900/50 p-6 rounded-lg">
+                    <h3 class="text-xl font-bold mb-2 text-[#00ff41]">WebScraper Recon Tool</h3>
+                    <p class="text-sm text-slate-400 mb-4">Python-based tool for subdomain enumeration and vulnerability classification.</p>
+                    <div class="flex gap-2 flex-wrap font-mono text-[10px] text-[#00ff41]">
+                        <span class="bg-emerald-900/30 px-2 py-1">Python</span>
+                        <span class="bg-emerald-900/30 px-2 py-1">Recon</span>
+                    </div>
+                </div>
+                <div class="project-card bg-slate-900/50 p-6 rounded-lg">
+                    <h3 class="text-xl font-bold mb-2 text-[#00ff41]">HydraVoice Deepfakes</h3>
+                    <p class="text-sm text-slate-400 mb-4">Research on voice cloning security implications and defense strategies.</p>
+                    <div class="flex gap-2 flex-wrap font-mono text-[10px] text-[#00ff41]">
+                        <span class="bg-emerald-900/30 px-2 py-1">AI Security</span>
+                        <span class="bg-emerald-900/30 px-2 py-1">Python</span>
+                    </div>
+                </div>
+                <div class="project-card bg-slate-900/50 p-6 rounded-lg">
+                    <h3 class="text-xl font-bold mb-2 text-[#00ff41]">Home NAS System</h3>
+                    <p class="text-sm text-slate-400 mb-4">Custom Python-based Network Attached Storage with secure GUI management.</p>
+                    <div class="flex gap-2 flex-wrap font-mono text-[10px] text-[#00ff41]">
+                        <span class="bg-emerald-900/30 px-2 py-1">Networking</span>
+                        <span class="bg-emerald-900/30 px-2 py-1">GUI</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="data-stream-divider"></div>
+
+        <!-- Contact Section -->
+        <section id="contact" class="text-center pb-20">
+            <h2 class="text-3xl font-display font-bold mb-6 text-[#00ff41] tracking-widest">// 04: SECURE.TRANSMISSION</h2>
+            <p class="text-slate-400 mb-10 max-w-md mx-auto">Establish a direct communication channel via the following nodes.</p>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-4xl mx-auto">
+                <a href="https://github.com/Sidhaant0802" target="_blank" class="flex items-center justify-center p-4 bg-slate-900 border border-[#00ff41]/30 rounded hover:border-[#00ff41] hover:bg-slate-800 transition transform hover:scale-105 group">
+                    <div class="text-left">
+                        <span class="block text-[10px] text-[#00ff41] font-mono opacity-60">NODE_01</span>
+                        <span class="block text-sm font-bold font-mono">GITHUB REPO</span>
+                    </div>
+                </a>
+                <a href="https://www.linkedin.com/in/sidhaant-menon-207585282" target="_blank" class="flex items-center justify-center p-4 bg-slate-900 border border-[#00ff41]/30 rounded hover:border-[#00ff41] hover:bg-slate-800 transition transform hover:scale-105">
+                    <div class="text-left">
+                        <span class="block text-[10px] text-[#00ff41] font-mono opacity-60">NODE_02</span>
+                        <span class="block text-sm font-bold font-mono">LINKEDIN</span>
+                    </div>
+                </a>
+                <a href="mailto:sidhaant99nmenon@gmail.com" class="flex items-center justify-center p-4 bg-slate-900 border border-[#00ff41]/30 rounded hover:border-[#00ff41] hover:bg-slate-800 transition transform hover:scale-105">
+                    <div class="text-left">
+                        <span class="block text-[10px] text-[#00ff41] font-mono opacity-60">NODE_03</span>
+                        <span class="block text-sm font-bold font-mono">SECURE EMAIL</span>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-slate-900/50 border-t border-[#00ff41]/10 py-10 text-center">
+        <p class="text-slate-500 text-xs font-mono">
+            &copy; <span id="year"></span> SIDHAANT | ENCRYPTION ACTIVE.
+        </p>
+    </footer>
+
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // Typing effect
+        const text = "> INITIATING_DEFENSE_PROTOCOL... [OK]";
+        let i = 0;
+        const container = document.getElementById('typing-container');
+        function type() {
+            if (i < text.length) {
+                container.textContent += text.charAt(i);
+                i++;
+                setTimeout(type, 100);
+            }
+        }
+        window.onload = type;
+
+        // Smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
